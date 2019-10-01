@@ -10,3 +10,4 @@ output [WIDTH - 1:0] prod;
 	assign prod = a * b;
 
 endmodule //End Multiplier Module
+//test

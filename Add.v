@@ -21,3 +21,4 @@ output [WIDTH-1:0] z;
 assign{cout,z} = cin + b + a;
 
 endmodule //End Full-Adder Module
+//test
