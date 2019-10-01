@@ -1,6 +1,18 @@
 `timescale 1ns / 1ps
+//Test Mux 2x1
+module testMux2x1(a_1,b_1,sel_1,d_1);
+	input [63:0] a_1;
+	input [63:0] b_1;
+	input [63:0] sel_1;
+	output [63:0] d_1;
+	
+	
+	
+	Mux2x1 #(.WIDTH(64)) Mux2x1_1(a_1,b_1,sel_1,d_1);
+endmodule
 
- module Mux2x1 #(parameter WIDTH = 8) (a, b, sel, d);
+//Mux2x1 Module
+ module Mux2x1 #(parameter WIDTH = 64) (a, b, sel, d);
 
  input [WIDTH - 1: 0] a; 
  input [WIDTH - 1: 0] b;
@@ -14,5 +26,4 @@
  else
  d = b;
 
- endmodule
-//test
+ endmodule //End Mux2x1 Module
