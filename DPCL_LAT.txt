@@ -1,8 +1,8 @@
-Adder : Latency2bit 5.361 Latency8bit 6.384 Latency16bit 6.618 Latency32bit 7.086 Latency64bit 8.022
-Comparator : Latency2bit 5.361 Latency8bit 6.827 Latency16bit 7.001 Latency32bit 7.718 Latency64bit 7.646
-Multiplier : Latency2bit 5.335 Latency8bit 8.624 Latency16bit 9.052 Latency32bit 12.975 Latency64bit 17.103
-Mux 2x1 : Latency2bit 5.335 Latency8bit 5.946 Latency16bit 6.245 Latency32bit 6.835 Latency64bit 7.135
+Adder : 5.361 6.384 6.618 7.086 8.022
+Comparator : 5.361 6.827 7.001 7.718 7.646
+Multiplier : 5.335 8.624 9.052 12.975 17.103
+Mux 2x1 : 5.335 5.946 6.245 6.835 7.135
 Register: Latency2bit Latency8bit Latency16bit Latency32bit Latency64bit
-Shift Left: Latency2bit 5.361 Latency8bit 6.253 Latency16bit 6.842 Latency32bit 7.044 Latency64bit 7.991
-Shift Right: Latency2bit 5.361 Latency8bit 6.253 Latency16bit 6.842 Latency32bit 7.044 Latency64bit 7.708
-Subtractor: Latency2bit 4.090 Latency8bit 4.090 Latency16bit 4.090 Latency32bit 4.090 Latency64bit 4.406
+Shift Left: 5.361 6.253 6.842 7.044 7.991
+Shift Right: 5.361 6.253 6.842 7.044 7.708
+Subtractor: 4.090 4.090 4.090 4.090 4.406

@@ -1,0 +1,18 @@
+Circuit 4:
+z1:(regdelay + 7.708 + regdelay + 7.135 + 7.646 + 8.022)
+z2:(regdelay + 7.708 + regdelay + 7.135 + 7.646 + 4.406)
+x1:(regdelay + 7.991 + regdelay + 7.135 + 7.646 + 4.406)
+x2:(regdelay + 7.991 + regdelay + 7.135 + 7.646 + 8.022)
+
+Circuit 3:
+avg:(regdelay + 7.044*3 + 7.086*7)
+
+Circuit 2:
+z1:(regdelay + 7.044 + 6.835 + 7.718 + 7.086)
+z2:(regdelay + 7.044 + 6.835 + 4.090)
+x:(regdelay + 7.044 + 6.835 + 7.718 + 7.086)
+
+Circuit 1:
+x:(regdelay + 4.090 + 9.052 + 6.245 + 7.001 + 6.384)
+
+     
