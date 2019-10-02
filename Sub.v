@@ -18,9 +18,9 @@ input clk;
 output reg [WIDTH - 1: 0] diff;
 
 
-	always @ (posedge clk)
+	always @ (posedge clk) begin
 	begin
 			diff <= a - b;
 	end
-
+end
 endmodule //End Subtractor Module
