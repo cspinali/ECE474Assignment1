@@ -1,10 +1,14 @@
-input [31:0] a, b, c
+`timescale 1ns / 1ps
 
-output [31:0] z, x
 
-wire [31:0] d, e, f, g, h
-wire dLTe, dEQe  
-wire [31:0] zwire, xwire
+module CircuitTest (clk,rst,a,b,c,z,x);
+input [31:0] a, b, c;
+input clk,rst;
+output [31:0] z, x;
+
+wire [31:0] d, e, f, g, h;
+wire dLTe, dEQe, dGTe; 
+wire [31:0] zwire, xwire;
 
 //d = a + b
 //e = a + c
@@ -22,9 +26,17 @@ wire [31:0] zwire, xwire
 Add #(.WIDTH(32)) Add_1(a,b,d);
 Add #(.WIDTH(32)) Add_2(a,c,e);
 Sub #(.WIDTH(32)) Sub_1(a,b,f);
-Comp #(.WIDTH(32)) Comp_1(d,e,dEQe,0,0);
-Comp #(.WIDTH(32)) Comp_2(d,e,0,dLTe,0);
-SHL #(.WIDTH(32)) SHL_1(a,dLTe,xwire);
+Comp #(.WIDTH(32)) Comp_1(d,e,dEQe,dLTe,dGTe);
+Comp #(.WIDTH(32)) Comp_2(d,e,dEQe,dLTe,dGTe);
+Mux2x1 #(.WIDTH(32)) Mux2x1_1(d,e,dLTe,g);
+Mux2x1 #(.WIDTH(32)) Mux2x1_2(g,f,dEQe,h);
+SHL #(.WIDTH(32)) SHL_1(g,dLTe,xwire);
 SHR #(.WIDTH(32)) SHR_1(h,dEQe,zwire);
-Reg #(.WIDTH(32)) Reg_1(xwire,x);
-Reg #(.WIDTH(32)) Reg_2(zwire,z);
+Reg #(.WIDTH(32)) Reg_1(xwire,clk,rst,x);
+Reg #(.WIDTH(32)) Reg_2(zwire,clk,rst,z);
+endmodule
+
+ 
+
+
+
