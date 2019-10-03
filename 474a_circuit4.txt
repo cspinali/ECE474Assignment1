@@ -1,0 +1,36 @@
+input [63:0] a, b, c
+
+output [31:0] z, x
+
+wire [63:0] d, e, f, g, h 			
+wire dLTe, dEQe 
+wire [63:0] xrin, zrin
+reg [63:0] greg, hreg
+
+//d = a + b
+//e = a + c
+//f = a - b  
+//dEQe = d == e
+//dLTe = d < e
+//g = dLTe ? d : e 
+//h = dEQe ? g : f 
+//greg = g
+//hreg = h
+//xrin = hreg << dLTe
+//zrin = greg >> dEQe
+//x = xrin
+//z = zrin
+
+Add #(.WIDTH(64)) Add_1(a,b,d);
+Add #(.WIDTH(64)) Add_2(a,c,e);
+Sub #(.WIDTH(64)) Sub_1(a,b,f);
+Comp #(.WIDTH(64)) Comp_1(d,e,dEQe,0,0);
+Comp #(.WIDTH(64)) Comp_2(d,e,0,dLTe,0);
+Mux2x1 #(.WIDTH(64)) Mux2x1_1(d,e,dLTe,g);
+Mux2x1 #(.WIDTH(64)) Mux2x1_2(g,f,dEQe,h);
+Reg #(.WIDTH(64)) Reg_1(g,greg);
+Reg #(.WIDTH(64)) Reg_2(h,hreg);
+SHL #(.WIDTH(64)) SHL_1(hreg,dLTe,xrin);
+SHR #(.WIDTH(64)) SHR_1(greg,dEQe,zrin);
+Reg #(.WIDTH(64)) Reg_3(xrin,{32'b0,x});
+Reg #(.WIDTH(64)) Reg_4(zrin,{32'b0,z});
