@@ -2,7 +2,7 @@ Adder : 5.361 6.384 6.618 7.086 8.022
 Comparator : 5.361 6.827 7.001 7.718 7.646
 Multiplier : 5.335 8.624 9.052 12.975 17.103
 Mux 2x1 : 5.335 5.946 6.245 6.835 7.135
-Register: Latency2bit Latency8bit Latency16bit Latency32bit Latency64bit
+Register: 4.090 4.090 4.090 4.090 4.090
 Shift Left: 5.361 6.253 6.842 7.044 7.991
 Shift Right: 5.361 6.253 6.842 7.044 7.708
 Subtractor: 4.090 4.090 4.090 4.090 4.406
