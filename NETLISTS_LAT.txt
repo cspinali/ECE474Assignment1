@@ -1,4 +1,4 @@
-Circuit1: Actual: 8.533
-Circuit2: Actual: 7.348
-Circuit3: Actual: 25.144
-Circuit4: Actual: 7.503
+Circuit1: 38.529 8.533
+Circuit2: 60.824 7.348
+Circuit3: 74.824 25.144
+Circuit4: 73.417 7.503
